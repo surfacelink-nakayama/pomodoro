@@ -3,7 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ポモドーロタイマー</title>
+
+  <!-- ===== SEO 基本設定 ===== -->
+  <!-- title: Googleの検索結果に表示されるタイトル（30〜60文字が理想） -->
+  <title>ポモドーロタイマー 無料 | BGM付き集中タイマー</title>
+
+  <!-- description: 検索結果のタイトル下に表示される説明文（120〜160文字が理想） -->
+  <meta name="description" content="無料で使えるポモドーロタイマー。雨音・カフェ・森などBGM付きで集中力アップ。登録不要・広告なし。スマホ・PCどちらでも使えます。25分集中→5分休憩のサイクルで生産性を高めよう。" />
+
+  <!-- keywords: 補助的なキーワード（現在のGoogleはあまり重視しないが入れておく） -->
+  <meta name="keywords" content="ポモドーロ,タイマー,集中,BGM,無料,作業用,勉強,ポモドーロテクニック" />
+
+  <!-- robots: Googleにインデックスを許可する -->
+  <meta name="robots" content="index, follow" />
+
+  <!-- canonical: このページの正式URLを明示する（重複インデックス防止） -->
+  <link rel="canonical" href="https://pomodoro-tau-mocha.vercel.app/" />
+
+  <!-- ===== OGP (SNSシェア時の見た目) ===== -->
+  <!-- XやLINEでURLを貼ったときにカード形式で表示される -->
+  <meta property="og:title"       content="ポモドーロタイマー 無料 | BGM付き集中タイマー" />
+  <meta property="og:description" content="雨音・カフェ・森などBGM付きで集中できる無料ポモドーロタイマー。登録不要・広告なし。" />
+  <meta property="og:url"         content="https://pomodoro-tau-mocha.vercel.app/" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:locale"      content="ja_JP" />
+
+  <!-- ===== 構造化データ (JSON-LD) ===== -->
+  <!-- Googleがページの内容を機械的に理解するためのデータ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ポモドーロタイマー",
+    "description": "BGM付きの無料ポモドーロタイマー。雨音・カフェ・森の音で集中力アップ。",
+    "url": "https://pomodoro-tau-mocha.vercel.app/",
+    "applicationCategory": "ProductivityApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    },
+    "inLanguage": "ja"
+  }
+  </script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -42,19 +85,19 @@
     .timer-mode-label { font-size: 13px; color: #888; margin-top: 4px; }
 
     /* ボタン */
-    .btn-row { display: flex; gap: 10px; justify-content: center; margin-bottom: 20px; }
+    .btn-row { display: flex; flex-direction: column; align-items: center; margin-bottom: 20px; gap: 6px; }
     .btn-start {
-      padding: 12px 36px; border-radius: 12px; font-size: 15px; font-weight: 600;
+      padding: 12px 48px; border-radius: 12px; font-size: 15px; font-weight: 600;
       background: #1a1a1a; color: #fff; border: none; cursor: pointer;
       transition: opacity 0.15s, transform 0.1s;
     }
     .btn-start:hover { opacity: 0.85; transform: translateY(-1px); }
     .btn-icon {
-      padding: 12px 16px; border-radius: 12px; font-size: 18px;
-      background: transparent; color: #aaa; border: 1px solid #e5e5e5;
+      padding: 4px 12px; border-radius: 8px; font-size: 13px;
+      background: transparent; color: #ccc; border: none;
       cursor: pointer; transition: background 0.15s;
     }
-    .btn-icon:hover { background: #f5f5f0; }
+    .btn-icon:hover { color: #888; }
 
     /* セッションドット */
     .sessions { display: flex; gap: 8px; justify-content: center; margin-bottom: 20px; }
